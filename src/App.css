@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/*
+
+
+
+.section{
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+
+.grid{
+  display: flex;
+}
+
+.section__title{
+  font-size: 20px;
+  font-weight: 20px;
+  text-align: center;
+  margin-bottom: 30.75rem;
+}
+
+.section__title::before{
+  content: '';
+  height:2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  left: -0.875rem;
+  top:-0.875rem;
+}
+*/
+

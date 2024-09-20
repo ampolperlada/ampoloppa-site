@@ -1,0 +1,53 @@
+
+
+.skills-container{
+  position: relative;
+  left: 25px;
+  margin: 40rem 0;
+
+}
+
+
+.skills-container h5{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+.skills-content{
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.skills{
+  flex: 1;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-info{
+  flex: 1;
+}
+
+.skillsz img {
+  width: 70px;
+
+  
+}
+
+@media (max-width:1025px){
+  .skills{
+    padding-left: 1rem;
+  }
+  .skills,
+  .skills-content{
+    grid-gap: 2rem;
+  }
+}
+
+
+
+
+
