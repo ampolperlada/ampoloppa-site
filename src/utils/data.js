@@ -16,6 +16,8 @@ export const SKILLS = [
     skills:[
       { skills: "Node.js", percentage: "70%" },
       { skills: "Express.js", percentage: "65%" },
+      { skills: "Java", percentage: "85%" },
+
     ],
   },
 
@@ -51,9 +53,9 @@ export const WORK_EXPERIENCE = [
     title:"React Native Fundamentals",
     date:"Completed: September 17,2024",
     responsibilities:[
-      "Covered foundational concepts of React Native, focusing on creating cross-platform apps for iOS and Android using JavaScript and React.",
-      "Key topics included components, state management, navigation, and styling.",
-      "Successfully built a basic website, demonstrating proficiency in creating responsive and performant user interfaces.",
+      "Covered foundational concepts of React Native, focusing on creating cross-platform apps for both iOS and Android using JavaScript and React.",
+      "Key topics included components, state management, navigation, and styling, with practical experience in debugging and optimizing apps for performance and functionality.",
+      "Successfully built a basic website, showcasing proficiency in responsive user interfaces and adherence to industry best practices for mobile and web development",
 
 
     ],
@@ -62,9 +64,9 @@ export const WORK_EXPERIENCE = [
   title:"Web Page Design Using HTML5 and CSS3",
   date:"Completed: April 5,2023",
   responsibilities:[
-    "Provided a solid foundation in web design using HTML5 and CSS3.",
+    "Provided a solid foundation in web design using HTML5 and CSS3, focusing on building structured, accessible, and visually engaging websites that adhere to best practices and modern standards.",
     "Learned to create structured, visually appealing web pages with semantic HTML elements, responsive design principles, and advanced CSS techniques like flexbox and grid layouts.",
-    "Built a fully functional, responsive web page that adheres to modern web standards.",
+    "Built a fully functional, responsive web page, showcasing proficiency in implementing designs that are user-friendly, cross-browser compatible, and optimized for different devices.",
 
 
   ],
