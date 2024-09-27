@@ -10,7 +10,8 @@ import Slider from 'react-slick';
 const Workexp = () => {
     const sliderRef = useRef();
   const settings = {
-    dots: false,
+    arrows: false, // Disables arrows
+    dots: false,   // Disables dots
     infinite:true,
     speed: 500,
     slidesToScroll: 2,
@@ -34,8 +35,6 @@ const Workexp = () => {
   const sliderLeft = () => {
     sliderRef.current.slickPrev();
   };
-
-
 
 
   

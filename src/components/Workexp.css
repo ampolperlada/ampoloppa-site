@@ -1,15 +1,26 @@
+body{
+  overflow-x: hidden;
+
+}
+
+
+
 .experience-container{
-  margin: 4rem 0;
+  margin: 6rem 0;
   position: relative;
-  left:28px;
+  left:18px;
   
 }
 
 
 .experience-container h5{
-  font-size: 1.5rem;
+  font: italic small-caps bold 16px/2 cursive;
+  font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+
+  color: white;
 }
 
 .arrow-left,
@@ -19,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6751b9;
+  color: #fd0000;
   border-radius: 0.65rem;
   position: absolute;
   top: 60%;
@@ -34,10 +45,34 @@
 }
 
 .arrow-left{
-  left: -1rem;
+  left: -1.2rem;
 }
 
 .arrow-right{
   right: 1.2rem;
 }
 
+
+@media (max-width: 1025px){
+  .arrow-left {
+    left: 0rem;
+  }
+
+  .arrow-right{
+    right: 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-container h5 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .arrow-left{
+    left: -1rem;
+  }
+  .arrow-right{
+    right: -1rem;
+  }
+}

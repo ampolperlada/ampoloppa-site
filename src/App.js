@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import Products from './components/pages/Products';
 import Skillz from './components/skillz.jsx';
 import Workexp from './components/Workexp.jsx';
+import AnimationTitle from './components/AnimationTitle.jsx';
 
 
 function App() {
@@ -19,8 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<Abouts />}></Route>
-          <Route path='/skills' element={<><Skillz /><Workexp /></>}></Route>
-
+          <Route path='/skills' element={<><AnimationTitle/> <Skillz /><Workexp />  </>}></Route>
 
 
         </Routes>

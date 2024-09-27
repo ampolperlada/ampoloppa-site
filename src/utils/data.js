@@ -61,7 +61,7 @@ export const WORK_EXPERIENCE = [
     ],
   },
 {
-  title:"Web Page Design Using HTML5 and CSS3",
+  title:"Web Page Design",
   date:"Completed: April 5,2023",
   responsibilities:[
     "Provided a solid foundation in web design using HTML5 and CSS3, focusing on building structured, accessible, and visually engaging websites that adhere to best practices and modern standards.",

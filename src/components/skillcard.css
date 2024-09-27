@@ -1,25 +1,26 @@
 
 .skillz-card {
   border-radius: 0.65rem;
-  border: 1.5px solid #6751b9;
+  border: 1.5px solid #000000;
   padding: 2.5rem;
   text-align: center;
-  background: rgba(22, 17, 47, 0.398);
+  background: rgba(248, 0, 0, 0.815);
   backdrop-filter: blur(1rem);
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: white;
 }
 
 
 .skillz-card:hover,
 .skillz-card.active{
-  background: linear-gradient(180deg,#aa94fe 0%, #7c5fe6 100%);
+  background: linear-gradient(180deg,#e26a08ab 0%, #d30000 100%);
 }
 
 .skillz-card span {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .skill-icon{
@@ -28,19 +29,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2a2252;
+  background:  rgb(46, 37, 37);
   border-radius: 0.65rem;
-  border: 1.5px solid #6852ba;
+  border: 1.5px solid #ff0000;
   position: absolute;
   top: -1rem;
   left: -1rem;
 }
 
 
+
 .skill-icon img{
   width: 2.4rem;
   height: auto;
   object-fit: contain;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 @media (max-width: 1025px){

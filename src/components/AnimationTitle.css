@@ -1,0 +1,75 @@
+
+
+.skill{
+  background-color: #de1c0c;
+  position: relative;
+}
+
+@keyframes slideinLeftImg {
+  from{
+    transform: translateX(850px);
+
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideinSamurai {
+  from{
+    transform: translateX(-150px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+
+
+.moveLeft-skill-image{
+  position: relative;
+  animation-name: slideinLeftImg ;
+  animation-duration: 2s;
+  animation-timing-function:ease-in ;
+  animation-delay: 0s;
+  animation-iteration-count:1 ;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: none;
+  transform: translateX(850px);  
+  margin-top: 220px;
+
+
+}
+
+
+.moveLeft-skill-image img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  position: relative;
+  top: -45px;
+}
+
+
+
+.moveLeft-image{
+  position: relative;
+  animation-name: slideinSamurai;
+  animation-duration: 1s;
+  animation-timing-function:ease-in ;
+  animation-delay: 0s;
+  animation-iteration-count:1 ;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: none;
+  transform: translateX(-150px);
+  max-width: 100%;
+  height: auto; 
+  display: flex; 
+  justify-content: space-between; /* Distributes space between the images */
+  align-items: center; /* Aligns images vertically (centered) */
+  margin: 20 10px;
+  margin-top: -300px;
+
+
+}
