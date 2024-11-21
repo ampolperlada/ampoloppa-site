@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Skillz from './components/skillz.jsx';
 import Workexp from './components/Workexp.jsx';
 import AnimationTitle from './components/AnimationTitle.jsx';
+import Contact from './components/Contactme.jsx';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<Abouts />}></Route>
+          <Route path='/about' element={<><Abouts /> <Contact/> </>}></Route>
           <Route path='/skills' element={<><AnimationTitle/> <Skillz /><Workexp />  </>}></Route>
 
 

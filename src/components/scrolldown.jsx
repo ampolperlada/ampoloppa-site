@@ -1,5 +1,6 @@
 import React from 'react'
 
+/*
 const scrolldown = () => {
   return (
     <div className='scroll__down'>
@@ -15,3 +16,4 @@ const scrolldown = () => {
 }
 
 export default scrolldown
+*/

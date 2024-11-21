@@ -2,7 +2,7 @@ import React from 'react'
 import pic from '../image/pics.png';
 import anm from '../image/animes.png';
 import './aboutme.css';
-import Hds from '../components/scrolldown';
+//import Hds from '../components/scrolldown';
 import Srld from '../components/Headersocials';
 
  const Aboutme = () =>{
@@ -17,7 +17,6 @@ import Srld from '../components/Headersocials';
       
         <a href='#contact' className='button-86'> Hire me </a>
 
-      <Hds/>
 
 
       </div>

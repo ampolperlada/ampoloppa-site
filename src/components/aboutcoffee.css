@@ -1,6 +1,7 @@
 
 .about__container{
   grid-template-columns: 3fr 9fr;
+  
 }
 
 .about__pic{
@@ -45,10 +46,9 @@ img{
 .grid{
   display: grid;
 }
-
-.section{
-  padding-top: 7rem;
-  padding-bottom: 2rem;
+.section {
+  padding-top: 3rem; /* Reduced padding to move the section up */
+  padding-bottom: 7rem;
 }
 
 .section__title{
@@ -216,10 +216,10 @@ img{
 }
 
 
-.about__boxes{
+.about__boxes {
   color: whitesmoke;
   position: absolute;
-  top: 525px;
+  top: 425px; /* Adjusted to move this section closer */
   grid-template-columns: repeat(4, 1fr);
   column-gap: 9.875rem;
 }
