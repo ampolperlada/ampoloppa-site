@@ -16,8 +16,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start; /* Align items to the left inside the card */
-  background: #580000;
-  border: 1.5px solid #e01a24;
+  background: #FF013C;
+  border: 1.5px solid #000000;
   border-radius: 0.65rem;
   padding: 1rem 1.5rem;
   width: 100%;

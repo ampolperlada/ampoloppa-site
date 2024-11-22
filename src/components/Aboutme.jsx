@@ -10,7 +10,7 @@ import Srld from '../components/Headersocials';
       <section className="about container" id="about">
       <div className="intro">
         <img src={anm} alt="" className="about_img" />
-        <h1 className="about__name"> Christian Paul Perlada </h1>
+        <h1 className="about__name"> Christi<span className='chris'>an</span> <span className='chris'>Paul</span> Perlada </h1>
         <span className="about__education"> Im a Developer </span>
 
       <Srld/> 

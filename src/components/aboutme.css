@@ -118,7 +118,11 @@
 }
 
 .home__socials-link:hover {
-  color: hsl(0, 100%, 53%);
+  color: #FF013C;
+}
+
+.chris{
+  color: #FF013C;
 }
 
 /* Responsive Design with Media Queries */
