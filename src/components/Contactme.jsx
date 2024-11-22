@@ -1,14 +1,16 @@
 import React from 'react'
 import './Contactme.css'
 import ContactInfoCardd from './ContactInfoCard'
+import ContactForm from './ContactForm'
 import emailIcon from '../image/email.png';
 import githubIcon from '../image/github.png';
-
+import linkedInicon from '../image/linkedin.png'
+import twitterIcon from '../image/twitter.png'
 
 const Contactme = () => {
   return (
     <section className='contact-container'>
-      <h5>Contact Me</h5>
+      <h5>.contact</h5>
 
       <div className='contact-container'>
         <div style={{flex: 1}}>
@@ -21,15 +23,18 @@ const Contactme = () => {
         text="https://github.com/ampolperlada"
           />
            <ContactInfoCardd
-        iconUrl={githubIcon}
-        text="https://github.com/ampolperlada"
+        iconUrl={twitterIcon}
+        text="https://x.com/ampolopppa"
           />
            <ContactInfoCardd
-        iconUrl={githubIcon}
-        text="https://github.com/ampolperlada"
+        iconUrl={linkedInicon}
+        text="Christian Paul Perlada"
           />
         </div>
-        <div style={{flex: 1}}></div>
+        <div style={{flex: 1}}>
+
+          <ContactForm/>
+        </div>
       </div>
     </section>
   )

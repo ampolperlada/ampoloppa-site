@@ -11,6 +11,7 @@ import Skillz from './components/skillz.jsx';
 import Workexp from './components/Workexp.jsx';
 import AnimationTitle from './components/AnimationTitle.jsx';
 import Contact from './components/Contactme.jsx';
+import Education from './components/Education.jsx';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<><Abouts /> <Contact/> </>}></Route>
+          <Route path='/about' element={<><Abouts /> <Education/> <Contact/> </>}></Route>
           <Route path='/skills' element={<><AnimationTitle/> <Skillz /><Workexp />  </>}></Route>
 
 
