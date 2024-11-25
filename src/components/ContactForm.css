@@ -28,9 +28,9 @@ form textarea{
   width: 100%;
   font-size: 0.9rem;
   color: #fff;
-  background: #130f2a;
+  background: #0e0e0e;
   border-radius: 0.6rem;
-  border: 1.5px solid #6751b9;
+  border: 1.5px solid #FF013C;
   padding: 1rem;
 }
 
@@ -39,7 +39,7 @@ form button{
   font-size: 30px;
   font-weight: 500;
   color: #fff;
-  border: 1.5px solid #a892fe;
+  border: 1.5px solid #FF013C;
   border-radius: 0.9rem;
   background: linear-gradient(90deg, #a892fe 0%, #8064e8 100%);
   transition: all 0.3s ease;
@@ -106,7 +106,7 @@ form button{
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
   
-  content: 'ALTERNATE TEXT';
+  content: 'ZZZ';
   display: block;
   position: absolute;
   top: 0;
