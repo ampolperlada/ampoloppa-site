@@ -81,19 +81,19 @@ margin: 50px;
   }
 }
 .btn--outline {
-  color: #007bff;
-  border: 1px solid #007bff;
+  color: #ffffff;
+  border: 1px solid #fcfcfc;
   background: none;
   transition: all 0.3s ease;
 }
 
 .btn--outline:hover {
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
 }
 
 .btn--outline.copied {
-  background-color: #28a745; /* Green */
-  border-color: #28a745;
+  background-color: #ff0000; /* Green */
+  border-color: #ff0000;
   color: white;
 }

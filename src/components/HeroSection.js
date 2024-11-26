@@ -39,7 +39,7 @@ function HeroSection() {
           <Cursor cursorStyle='<' />
         </span>
       </h1>
-      <p>?????????</p>
+      <p>こんにちは</p>
       <div className='hero-btns'>
         <Button
           className={`btns`}
@@ -56,7 +56,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={() => console.log('hey')}
         >
-          Hai $ <i className='far fa-play-circle' />
+           $ <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>
