@@ -19,7 +19,8 @@ const Coffeabout = () => {
     applying your knowledge of HTML, CSS, and JavaScript.</p>
 
 
-    <a href="" class="btn effect04" data-sm-link-text="SV" target="_blank"><span>Download</span></a>
+    <a href="/Cv/Resume(0).pdf" class="btn effect04" data-sm-link-text="SV" download target="_blank"><span>Download</span></a>
+
 
         </div>
 
