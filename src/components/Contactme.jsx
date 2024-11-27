@@ -9,7 +9,7 @@ import twitterIcon from '../image/twitter.png'
 
 const Contactme = () => {
   return (
-    <section className='contact-container'>
+    <section className='contact-container'  id="contact-link">
       <h5>.contact</h5>
 
       <div className='contact-container'>
