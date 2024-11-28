@@ -1,3 +1,6 @@
+body{
+  background-color: #242424;
+}
 .contact-container {
   display: flex; /* Arrange items side by side or stacked */
   flex-direction: column; /* Stack items vertically */

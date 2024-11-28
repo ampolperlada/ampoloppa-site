@@ -16,22 +16,22 @@ const Contactme = () => {
         <div style={{flex: 1}}>
         <ContactInfoCardd
         iconUrl={emailIcon}
-        text="christianp.perlada@gmail.com"
+        text="これは私の Email"
         link="mailto:christianp.perlada@gmail.com"
           />
         <ContactInfoCardd
         iconUrl={githubIcon}
-        text="https://github.com/ampolperlada"
+        text="これは私の Github"
         link="https://github.com/ampolperlada"
           />
            <ContactInfoCardd
         iconUrl={twitterIcon}
-        text="https://x.com/ampolopppa"
+        text="これは私の Twitter"
         link="https://x.com/ampolopppa"
           />
            <ContactInfoCardd
         iconUrl={linkedInicon}
-        text="Christian Paul Perlada"
+        text="これは私の LinkedIn"
         link="https://linkedin.com/in/christian-paul-perlada"
           />
         </div>
