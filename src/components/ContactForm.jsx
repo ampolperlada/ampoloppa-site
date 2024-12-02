@@ -1,44 +1,62 @@
-import React from 'react'
-import './ContactForm.css'
+import React, { useState } from 'react';
+import './ContactForm.css';
 
 const ContactForm = () => {
-  return (
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-  
-      formData.append("access_key", "15e3e590-9f9e-4dbf-88d1-53e9b6e92433");
-  
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-  
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+  const [status, setStatus] = useState(null); // For feedback
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append('access_key', '15e3e590-9f9e-4dbf-88d1-53e9b6e92433');
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: json
-      }).then((res) => res.json());
-  
-      if (res.success) {
-        console.log("Success", res);
+        body: json,
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus('Success! Your message has been sent.');
+      } else {
+        setStatus('Failed to send message. Please try again later.');
       }
-    };
+    } catch (error) {
+      setStatus('An error occurred. Please try again later.');
+    }
+  };
 
+  return (
     <div className='contact-form-content'>
-      <form>
+      <form onSubmit={onSubmit}>
         <div className='name-container'>
-          <input type='text' name="firstname" placeholder='First Name'></input>
-          <input type='text' name="lastname" placeholder='Last Name'></input>
+          <input type='text' name='firstname' placeholder='First Name' required />
+          <input type='text' name='lastname' placeholder='Last Name' required />
         </div>
-        <input type='text' name='email' placeholder='Email'></input>
-        <textarea type="text"   name="message" placeholder='Message' rows={3}></textarea>
+        <input type='email' name='email' placeholder='Email' required />
+        <textarea
+          name='message'
+          placeholder='Message'
+          rows={3}
+          required
+        ></textarea>
 
-        <button className='button-49'>Send</button>
+        <button className='button-49' type='submit'>
+          Send
+        </button>
       </form>
+      {status && <p className='form-status'>{status}</p>}
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
