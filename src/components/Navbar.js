@@ -57,13 +57,9 @@ function Navbar() {
             .about()
               </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/blog' className='nav-links' onClick={closeMobileMenu}>
-            .contact()
-              </Link>
-          </li>
+         
         </ul>
-        {button && <Button buttonStyle='btn--outline'>Portfolio</Button>}
+        {button && <Button buttonStyle='btn--outline'>X</Button>}
       </div>
      </nav>
      </>

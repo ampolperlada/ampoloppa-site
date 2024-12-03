@@ -7,7 +7,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 function HeroSection() {
   const [textti] = useTypewriter({
-    words: ['Web Developer', 'Developer', 'Designer', 'Oppa'],
+    words: ['Junior Developer', 'Backend Developer', 'Designer', 'Oppa'],
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80,
