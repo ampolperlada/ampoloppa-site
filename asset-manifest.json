@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/crypto-app-react/static/css/main.fcc79ba2.css",
+    "main.js": "/crypto-app-react/static/js/main.276ef367.js",
+    "static/media/tanginanyo.mp4": "/crypto-app-react/static/media/tanginanyo.fd4e83d3f1d9881f1403.mp4",
+    "static/media/Samurai.png": "/crypto-app-react/static/media/Samurai.58f5cd59f1b11ffaeb0a.png",
+    "static/media/animes.png": "/crypto-app-react/static/media/animes.51c00106d3b65ef0a2ae.png",
+    "static/media/pics.png": "/crypto-app-react/static/media/pics.c08871083f03a6e18642.png",
+    "static/media/github.png": "/crypto-app-react/static/media/github.f11021803f68852df283.png",
+    "static/media/twitter.png": "/crypto-app-react/static/media/twitter.8e65601e69067aadfe55.png",
+    "static/media/email.png": "/crypto-app-react/static/media/email.51b08bcbb5af7a861c31.png",
+    "static/media/slick.svg": "/crypto-app-react/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/crypto-app-react/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/crypto-app-react/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/crypto-app-react/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/crypto-app-react/index.html",
+    "main.fcc79ba2.css.map": "/crypto-app-react/static/css/main.fcc79ba2.css.map",
+    "main.276ef367.js.map": "/crypto-app-react/static/js/main.276ef367.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcc79ba2.css",
+    "static/js/main.276ef367.js"
+  ]
+}
