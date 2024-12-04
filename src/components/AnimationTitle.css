@@ -1,8 +1,14 @@
-
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 100%; /* Adjust as per your design */
+  height: auto;
+  position: absolute;
+}
 
 .skill{
   background-color: #de1c0c;
-  position: relative;
+ 
 }
 
 @keyframes slideinLeftImg {
