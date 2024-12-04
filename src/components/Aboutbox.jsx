@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCheck } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
 import { FiCoffee } from "react-icons/fi";
 import { IoIosPeople } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
