@@ -11,7 +11,7 @@ const AnimationTitle = () => {
         <img src={skillimg} alt="skill-image" />
       </div>
       <div className='moveLeft-image'>
-        <img src={samurai} alt="Samurai"/>
+        <img src={samurai} alt="Samurais"/>
       </div>
       </div>
     </>

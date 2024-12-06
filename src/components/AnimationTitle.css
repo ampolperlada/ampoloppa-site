@@ -3,7 +3,6 @@
   margin: 0 auto;
   width: 100%; /* Adjust as per your design */
   height: auto;
-  position: absolute;
 }
 
 .skill{
@@ -35,7 +34,6 @@
 
 
 .moveLeft-skill-image{
-  position: relative;
   animation-name: slideinLeftImg ;
   animation-duration: 2s;
   animation-timing-function:ease-in ;
@@ -60,7 +58,6 @@
 
 
 .moveLeft-image{
-  position: relative;
   animation-name: slideinSamurai;
   animation-duration: 1s;
   animation-timing-function:ease-in ;
