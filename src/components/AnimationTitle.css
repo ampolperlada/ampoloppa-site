@@ -15,6 +15,9 @@
   left: -100px; /* Moves closer to the Skills text */
 }
 
+.skill{
+  background-color: #ec1000;
+}
 .moveLeft-skill-image{
   animation-name: slideinLeftImg ;
   animation-duration: 2s;
