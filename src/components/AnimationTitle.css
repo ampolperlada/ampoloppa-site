@@ -1,26 +1,4 @@
 
-
-@keyframes slideinLeftImg {
-  from{
-    transform: translateX(850px);
-
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideinSamurai {
-  from{
-    transform: translateX(-150px);
-  }
-
-  to {
-    transform: translateX(0px);
-  }
-}
-
 .moveLeft-image {
   animation-name: slideinSamurai;
   animation-duration: 1s;
@@ -47,6 +25,7 @@
   animation-fill-mode: none;
   transform: translateX(850px);  
   margin-top: 220px;
+  position: relative;
 
 
 }
@@ -58,6 +37,7 @@
   position: relative;
   top: -45px;
 }
+
 
 
 

@@ -3,6 +3,7 @@ import './AnimationTitle.css';
 import samurai from '../image/Samurai.png';
 import skillimg from '../image/Skillimage.png'
 
+
 const AnimationTitle = () => {
   return (
     <>
