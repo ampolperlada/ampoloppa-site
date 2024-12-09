@@ -32,7 +32,7 @@ const Contactme = () => {
            <ContactInfoCardd
         iconUrl={linkedInicon}
         text="これは私の LinkedIn"
-        link="https://linkedin.com/in/christian-paul-perlada"
+        link="https://www.linkedin.com/in/christian-paul-perlada-b583472b1/"
           />
         </div>
         <div style={{flex: 1}}>
