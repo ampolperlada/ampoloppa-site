@@ -1,9 +1,3 @@
-.image {
-  width: 100%; /* Adjust as per your design */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
 
 @keyframes slideinLeftImg {
@@ -27,24 +21,20 @@
   }
 }
 
-.moveLeft-image{
+.moveLeft-image {
   animation-name: slideinSamurai;
   animation-duration: 1s;
-  animation-timing-function:ease-in ;
+  animation-timing-function: ease-in;
   animation-delay: 0s;
-  animation-iteration-count:1 ;
+  animation-iteration-count: 1;
   animation-direction: alternate-reverse;
   animation-fill-mode: none;
-  transform: translateX(-150px);
+  transform: translateX(-150px); /* Adjust the X position */
   max-width: 100%;
-  height: auto; 
-  display: flex; 
-  justify-content: space-between; /* Distributes space between the images */
-  align-items: center; /* Aligns images vertically (centered) */
-  margin: 20 10px;
-  margin-top: -300px;
-
-
+  height: auto;
+  position: relative; /* Allows fine-tuning with top/left */
+  margin-top: -300px; /* Adjust based on design */
+  left: -100px; /* Moves closer to the Skills text */
 }
 
 .moveLeft-skill-image{
