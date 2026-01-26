@@ -7,7 +7,6 @@ const SkillInfoCards = ({ heading, skills = [] }) => {
       {/* Header */}
       <div className='info-card-header'>
         <h6 className='info-heading'>
-          <span className='heading-icon'>⚡</span>
           {heading}
           <span className='heading-badge'>{skills.length} Skills</span>
         </h6>
