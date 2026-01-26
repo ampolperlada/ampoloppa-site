@@ -1,23 +1,56 @@
-import React, { useState } from 'react'
+import React from 'react';
 import './AnimationTitle.css';
-import samurai from '../image/Samurai.png';
-import skillimg from '../image/Skillimage.png'
-
+import Samurai from '../image/Samurai.png';
 
 const AnimationTitle = () => {
   return (
-    <>
-      <div className="skill">
-      <div className='moveLeft-skill-image'>
-        <img src={skillimg} alt="skill-image" />
+    <div className='animation-title-container'>
+      {/* Glitch overlay effect */}
+      <div className='glitch-overlay'></div>
+      
+      {/* Main image with multiple layers for depth */}
+      <div className='samurai-wrapper'>
+        <img 
+          src={Samurai} 
+          alt="Samurai warrior illustration" 
+          className='samurai-image samurai-base'
+        />
+        <img 
+          src={Samurai} 
+          alt="" 
+          className='samurai-image samurai-glitch-1'
+          aria-hidden="true"
+        />
+        <img 
+          src={Samurai} 
+          alt="" 
+          className='samurai-image samurai-glitch-2'
+          aria-hidden="true"
+        />
+        
+        {/* Scan lines effect */}
+        <div className='scanlines'></div>
+        
+        {/* Color aberration overlay */}
+        <div className='chromatic-overlay'></div>
       </div>
-      <div className='moveLeft-image'>
-        <img src={samurai} alt="Samurais"/>
+      
+      {/* Title overlay */}
+      <div className='title-overlay'>
+        <h1 className='section-main-title'>
+          <span className='title-bracket'>&lt;</span>
+          SKILLS
+          <span className='title-bracket'>/&gt;</span>
+        </h1>
       </div>
-      </div>
-    </>
+      
+      {/* Animated corner accents */}
+      <div className='corner-accent corner-top-left'></div>
+      <div className='corner-accent corner-top-right'></div>
+      <div className='corner-accent corner-bottom-left'></div>
+      <div className='corner-accent corner-bottom-right'></div>
+    </div>
   );
-}
+};
 
-
-export default AnimationTitle
+export default AnimationTitle;

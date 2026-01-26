@@ -1,46 +1,327 @@
-
-.moveLeft-image {
-  animation-name: slideinSamurai;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: none;
-  transform: translateX(-150px); /* Adjust the X position */
-  max-width: 100%;
-  height: auto;
-  position: relative; /* Allows fine-tuning with top/left */
-  margin-top: -300px; /* Adjust based on design */
-  left: -100px; /* Moves closer to the Skills text */
-}
-
-.skill{
-  background-color: #ec1000;
-}
-.moveLeft-skill-image{
-  animation-name: slideinLeftImg ;
-  animation-duration: 2s;
-  animation-timing-function:ease-in ;
-  animation-delay: 0s;
-  animation-iteration-count:1 ;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: none;
-  transform: translateX(850px);  
-  margin-top: 220px;
+.animation-title-container {
+  width: 100%;
+  height: 500px;
   position: relative;
-
-
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Glitch Overlay Effect */
+.glitch-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 0, 0, 0.05) 0px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.3;
+  animation: glitchPulse 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
 
-.moveLeft-skill-image img {
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
+/* Samurai Image Container */
+.samurai-wrapper {
   position: relative;
-  top: -45px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.samurai-image {
+  position: absolute;
+  width: auto;
+  height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  filter: contrast(1.2) brightness(1.1);
+}
 
+/* Base image */
+.samurai-base {
+  z-index: 1;
+  filter: contrast(1.2) brightness(1.1) drop-shadow(0 10px 40px rgba(255, 0, 80, 0.4));
+  animation: breathe 4s ease-in-out infinite;
+}
 
+/* Glitch layers */
+.samurai-glitch-1 {
+  z-index: 0;
+  opacity: 0;
+  filter: brightness(1.5) contrast(1.5);
+  mix-blend-mode: screen;
+  animation: glitchShift1 0.3s infinite;
+}
 
+.samurai-glitch-2 {
+  z-index: 0;
+  opacity: 0;
+  filter: hue-rotate(180deg) brightness(1.3);
+  mix-blend-mode: overlay;
+  animation: glitchShift2 0.4s infinite;
+}
+
+/* Scan lines effect */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.3;
+  animation: scanlineMove 8s linear infinite;
+}
+
+/* Chromatic aberration overlay */
+.chromatic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 2;
+  animation: chromaticShift 2s ease-in-out infinite;
+}
+
+/* Title Overlay */
+.title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.section-main-title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-align: center;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-shadow: 
+    0 0 20px rgba(255, 0, 80, 0.8),
+    0 0 40px rgba(255, 0, 80, 0.6),
+    0 0 60px rgba(255, 0, 80, 0.4),
+    3px 3px 0 rgba(255, 0, 80, 0.5),
+    -3px -3px 0 rgba(0, 255, 255, 0.5);
+  animation: titleGlitch 3s ease-in-out infinite;
+  position: relative;
+}
+
+.title-bracket {
+  color: #ff0050;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8em;
+  text-shadow: 0 0 30px rgba(255, 0, 80, 1);
+}
+
+/* Corner Accents */
+.corner-accent {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ff0050;
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.corner-top-left {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+  animation: cornerPulse 2s ease-in-out infinite;
+}
+
+.corner-top-right {
+  top: 20px;
+  right: 20px;
+  border-left: none;
+  border-bottom: none;
+  animation: cornerPulse 2s ease-in-out infinite 0.5s;
+}
+
+.corner-bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: none;
+  border-top: none;
+  animation: cornerPulse 2s ease-in-out infinite 1s;
+}
+
+.corner-bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+  animation: cornerPulse 2s ease-in-out infinite 1.5s;
+}
+
+/* Animations */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes glitchShift1 {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  91%, 95% {
+    opacity: 0.7;
+    transform: translate(-5px, 2px);
+  }
+}
+
+@keyframes glitchShift2 {
+  0%, 85%, 100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  86%, 92% {
+    opacity: 0.5;
+    transform: translate(5px, -3px);
+  }
+}
+
+@keyframes glitchPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes scanlineMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes chromaticShift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-2px, 1px);
+  }
+  66% {
+    transform: translate(2px, -1px);
+  }
+}
+
+@keyframes titleGlitch {
+  0%, 90%, 100% {
+    text-shadow: 
+      0 0 20px rgba(255, 0, 80, 0.8),
+      0 0 40px rgba(255, 0, 80, 0.6),
+      0 0 60px rgba(255, 0, 80, 0.4),
+      3px 3px 0 rgba(255, 0, 80, 0.5),
+      -3px -3px 0 rgba(0, 255, 255, 0.5);
+  }
+  92% {
+    text-shadow: 
+      0 0 20px rgba(255, 0, 80, 0.8),
+      0 0 40px rgba(255, 0, 80, 0.6),
+      0 0 60px rgba(255, 0, 80, 0.4),
+      -5px 3px 0 rgba(255, 0, 80, 0.7),
+      5px -3px 0 rgba(0, 255, 255, 0.7);
+  }
+  94% {
+    text-shadow: 
+      0 0 20px rgba(255, 0, 80, 0.8),
+      0 0 40px rgba(255, 0, 80, 0.6),
+      0 0 60px rgba(255, 0, 80, 0.4),
+      5px -3px 0 rgba(255, 0, 80, 0.7),
+      -5px 3px 0 rgba(0, 255, 255, 0.7);
+  }
+}
+
+@keyframes cornerPulse {
+  0%, 100% {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 0, 80, 0.5);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 0, 80, 0.8);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .animation-title-container {
+    height: 350px;
+  }
+
+  .samurai-image {
+    height: 80%;
+  }
+
+  .section-main-title {
+    font-size: 3rem;
+  }
+
+  .corner-accent {
+    width: 40px;
+    height: 40px;
+  }
+
+  .corner-top-left,
+  .corner-top-right {
+    top: 10px;
+  }
+
+  .corner-bottom-left,
+  .corner-bottom-right {
+    bottom: 10px;
+  }
+
+  .corner-top-left,
+  .corner-bottom-left {
+    left: 10px;
+  }
+
+  .corner-top-right,
+  .corner-bottom-right {
+    right: 10px;
+  }
+}
