@@ -1,19 +1,34 @@
-import React from 'react'
-import './skillcard.css'
+import React from 'react';
+import './skillcard.css';
 
-const skillzcard = ({title, iconURL, isActive, onClick}) =>{
+const SkillCard = ({ title, iconURL, isActive, onClick, index }) => {
   return (
     <div
-      className={'skillz-card ${isActive ? "active" : ""}'}
-      onClick={() =>onClick ()}
-      >
-        <div className="skill-icon">
-          <img src={iconURL} alt ={title} />
+      className={`skills-card ${isActive ? 'active' : ''}`}
+      onClick={onClick}
+      style={{
+        animationDelay: `${index * 0.1}s`
+      }}
+    >
+      <div className='skill-icon-wrapper'>
+        <img src={iconURL} alt={`${title} icon`} className='skill-icon' />
+        <div className='icon-glow'></div>
+      </div>
+      
+      <h6 className='skill-title'>{title}</h6>
+      
+      {/* Active Indicator */}
+      {isActive && (
+        <div className='active-indicator'>
+          <span className='indicator-dot'></span>
+          <span className='indicator-text'>Selected</span>
         </div>
-
-        <span> {title} </span>
+      )}
+      
+      {/* Hover Arrow */}
+      <div className='card-arrow'>→</div>
     </div>
-  )
-}
+  );
+};
 
-export default skillzcard
+export default SkillCard;
