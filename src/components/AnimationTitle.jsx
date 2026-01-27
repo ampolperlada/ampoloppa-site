@@ -8,6 +8,12 @@ const AnimationTitle = () => {
       {/* Glitch overlay effect */}
       <div className='glitch-overlay'></div>
       
+      {/* VHS noise effect */}
+      <div className='vhs-noise'></div>
+      
+      {/* Neon grid background */}
+      <div className='neon-grid'></div>
+      
       {/* Main image with multiple layers for depth */}
       <div className='samurai-wrapper'>
         <img 
@@ -33,6 +39,9 @@ const AnimationTitle = () => {
         
         {/* Color aberration overlay */}
         <div className='chromatic-overlay'></div>
+        
+        {/* Neon glow trails */}
+        <div className='neon-trails'></div>
       </div>
       
       {/* Title overlay */}
@@ -49,6 +58,9 @@ const AnimationTitle = () => {
       <div className='corner-accent corner-top-right'></div>
       <div className='corner-accent corner-bottom-left'></div>
       <div className='corner-accent corner-bottom-right'></div>
+      
+      {/* Holographic shimmer overlay */}
+      <div className='holographic-shimmer'></div>
     </div>
   );
 };
