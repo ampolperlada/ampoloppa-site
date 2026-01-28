@@ -11,9 +11,9 @@ import AnimationTitle from './components/AnimationTitle.jsx';
 import Contact from './components/Contactme.jsx';
 import Education from './components/Education.jsx';
 
-// ADD THESE NEW IMPORTS WITH YOUR FILE NAMES
-import ExpWork from './components/ExpWork.jsx';
-import Project from './components/Project.jsx';
+// CHANGE TO Projects (with 's')
+import ExpWork from './components/ExpWork';
+import Projects from './components/Projects';  // <-- ADD THE 'S'
 
 function App() {
   return (
@@ -23,12 +23,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           
-          {/* ADD ExpWork and Project to the About page */}
           <Route path='/about' element={
             <>
               <Abouts /> 
-              <ExpWork />    {/* NEW - Work experience cards */}
-              <Project />    {/* NEW - Project cards */}
+              <ExpWork />
+              <Projects />  {/* <-- CHANGE TO Projects */}
               <Education /> 
               <Contact />
             </>

@@ -1,12 +1,14 @@
 /* Projects Wrapper */
 .projects-wrapper {
   background: #242424;
+  width: 100%;
 }
 
 /* Projects Section */
 .projects-section {
   padding: 80px 5% 60px;
   position: relative;
+  width: 100%;
 }
 
 .personal-section {
@@ -27,9 +29,9 @@
   color: #ff0050;
 }
 
-/* Projects Grid */
+/* Projects Grid - CENTERED WITH MAX WIDTH */
 .projects-grid {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -40,7 +42,7 @@
 .project-card-item {
   background: rgba(40, 40, 45, 0.8);
   border: 2px solid #ff0050;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 30px;
   position: relative;
   overflow: hidden;
