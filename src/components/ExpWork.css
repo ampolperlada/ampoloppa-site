@@ -1,9 +1,10 @@
-/* Work Experience Section */
+/* Work Experience Section - CLEAN BLACK BACKGROUND */
 .work-experience-section {
-  background: #242424;
+  background: transparent; /* No grey container */
   padding: 80px 5% 60px;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Section Heading */
@@ -31,36 +32,35 @@
 
 /* Experience Card */
 .exp-card {
-  background: rgba(40, 40, 45, 0.8);
+  background: transparent; /* No background, just border */
   border: 2px solid #ff0050;
   border-radius: 15px;
-  padding: 35px;
+  padding: 35px 40px;
   position: relative;
   transition: all 0.4s ease;
   overflow: hidden;
+  width: 100%;
 }
 
 .exp-card::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #ff0050, #cc0040, #ff0050);
-  border-radius: 15px;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.4s ease;
+  top: 0;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 80, 0.1), transparent);
+  transition: left 0.6s ease;
 }
 
 .exp-card:hover {
+  background: rgba(40, 40, 45, 0.3); /* Slight background on hover */
   transform: translateX(10px);
   box-shadow: -8px 8px 30px rgba(255, 0, 80, 0.4);
 }
 
 .exp-card:hover::before {
-  opacity: 0.3;
+  left: 100%;
 }
 
 /* Card Header */
@@ -180,7 +180,7 @@
   }
 
   .exp-card {
-    padding: 25px;
+    padding: 25px 20px;
   }
 
   .exp-header {

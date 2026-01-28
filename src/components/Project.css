@@ -1,11 +1,12 @@
-/* Projects Wrapper */
+/* Projects Wrapper - NO GREY BACKGROUND */
 .projects-wrapper {
-  background: #242424;
+  background: transparent;
   width: 100%;
 }
 
 /* Projects Section */
 .projects-section {
+  background: transparent; /* Clean, no container */
   padding: 80px 5% 60px;
   position: relative;
   width: 100%;
@@ -29,9 +30,9 @@
   color: #ff0050;
 }
 
-/* Projects Grid - CENTERED WITH MAX WIDTH */
+/* Projects Grid */
 .projects-grid {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -40,7 +41,7 @@
 
 /* Project Card */
 .project-card-item {
-  background: rgba(40, 40, 45, 0.8);
+  background: transparent; /* No background, just border */
   border: 2px solid #ff0050;
   border-radius: 12px;
   padding: 30px;
@@ -71,6 +72,7 @@
 }
 
 .project-card-item:hover {
+  background: rgba(40, 40, 45, 0.3); /* Slight background on hover */
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
 }

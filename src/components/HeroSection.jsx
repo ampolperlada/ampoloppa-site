@@ -40,7 +40,7 @@ function HeroSection() {
       <video src={fuck} autoPlay loop muted />
       
       {/* Added greeting */}
-      <p className='hero-greeting'>こんにちは (Hello!) 👋</p>
+      <p className='hero-greeting'>こんにちは (Hello!) </p>
       
       {/* Main title - FIXED "Ampol" */}
       <h1 className='hero-name'>
@@ -87,7 +87,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={handleCopy}
         >
-          {isCopied ? '📋 Copied!' : '📱 Call Me'}
+          {isCopied ? ' Copied!' : ' Call Me'}
         </Button>
 
         <Button
