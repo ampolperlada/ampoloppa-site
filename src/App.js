@@ -5,14 +5,15 @@ import './App.css';
 import Home from './components/pages/Home';
 import Abouts from './components/pages/About.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Services from './components/pages/Services';
-//import Products from './components/pages/Products';
 import Skillz from './components/skillz.jsx';
 import Workexp from './components/Workexp.jsx';
 import AnimationTitle from './components/AnimationTitle.jsx';
 import Contact from './components/Contactme.jsx';
 import Education from './components/Education.jsx';
 
+// ADD THESE NEW IMPORTS
+import WorkExperience from './components/WorkExperience.jsx';
+import Projects from './components/Projects.jsx';
 
 function App() {
   return (
@@ -21,10 +22,25 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<><Abouts /> <Education/> <Contact/> </>}></Route>
-          <Route path='/skills' element={<><AnimationTitle/> <Skillz /><Workexp />  </>}></Route>
-
-
+          
+          {/* ADD WorkExperience and Projects to the About page */}
+          <Route path='/about' element={
+            <>
+              <Abouts /> 
+              <WorkExperience />  {/* NEW - Work experience cards */}
+              <Projects />        {/* NEW - Project cards */}
+              <Education /> 
+              <Contact />
+            </>
+          }></Route>
+          
+          <Route path='/skills' element={
+            <>
+              <AnimationTitle /> 
+              <Skillz />
+              <Workexp />
+            </>
+          }></Route>
         </Routes>
       </Router>
     </>
