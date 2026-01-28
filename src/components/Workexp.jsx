@@ -1,7 +1,6 @@
 import React from 'react';
 import './Workexp.css';
-import { WORK_EXPERIENCE } from '../utils/data';
-import Expcard from './Expcard';
+import { CERTIFICATIONS } from '../utils/data';
 
 const Workexp = () => {
   return (
@@ -14,8 +13,19 @@ const Workexp = () => {
 
       <div className='experience-content'>
         <div className='certifications-grid'>
-          {WORK_EXPERIENCE.map((item) => (
-            <Expcard key={item.title} details={item} />
+          {CERTIFICATIONS.map((cert, index) => (
+            <div key={cert.title} className='certification-card' style={{ animationDelay: `${index * 0.1}s` }}>
+              <h3 className='cert-title'>{cert.title}</h3>
+              <div className='cert-meta'>
+                <span className='cert-issuer'>{cert.issuer}</span>
+                <span className='cert-date'>{cert.date}</span>
+              </div>
+              <ul className='cert-description'>
+                {cert.description.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>
