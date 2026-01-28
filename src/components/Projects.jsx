@@ -1,7 +1,7 @@
 import React from 'react';
-import './Projects.css';
+import './Project.css';  // Change from Projects.css
 
-const Projects = () => {
+const Project = () => {
   const professionalProjects = [
     {
       title: "AI-Enhanced Project Management",
@@ -123,4 +123,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Project;

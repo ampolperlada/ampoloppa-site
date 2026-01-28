@@ -1,7 +1,7 @@
 import React from 'react';
-import './WorkExperience.css';
+import './ExpWork.css';  // Change from WorkExperience.css
 
-const WorkExperience = () => {
+const ExpWork = () => {
   const experiences = [
     {
       title: "Junior Software Engineer",
@@ -68,4 +68,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default ExpWork;

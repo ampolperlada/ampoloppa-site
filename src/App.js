@@ -11,9 +11,9 @@ import AnimationTitle from './components/AnimationTitle.jsx';
 import Contact from './components/Contactme.jsx';
 import Education from './components/Education.jsx';
 
-// ADD THESE NEW IMPORTS
-import WorkExperience from './components/WorkExperience.jsx';
-import Projects from './components/Projects.jsx';
+// ADD THESE NEW IMPORTS WITH YOUR FILE NAMES
+import ExpWork from './components/ExpWork.jsx';
+import Project from './components/Project.jsx';
 
 function App() {
   return (
@@ -23,12 +23,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           
-          {/* ADD WorkExperience and Projects to the About page */}
+          {/* ADD ExpWork and Project to the About page */}
           <Route path='/about' element={
             <>
               <Abouts /> 
-              <WorkExperience />  {/* NEW - Work experience cards */}
-              <Projects />        {/* NEW - Project cards */}
+              <ExpWork />    {/* NEW - Work experience cards */}
+              <Project />    {/* NEW - Project cards */}
               <Education /> 
               <Contact />
             </>
