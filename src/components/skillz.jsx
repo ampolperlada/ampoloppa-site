@@ -31,7 +31,6 @@ function Skillz() {
           {SKILLS.map((item, index) => (
             <SkillCard
               key={item.title}
-              iconURL={item.icon}
               title={item.title}
               isActive={selectedSkill.title === item.title}
               onClick={() => {

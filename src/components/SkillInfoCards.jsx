@@ -56,7 +56,7 @@ const SkillInfoCards = ({ heading, skills = [] }) => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default SkillInfoCards;
