@@ -6,14 +6,16 @@ import Home from './components/pages/Home';
 import Abouts from './components/pages/About.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Skillz from './components/skillz.jsx';
-import Workexp from './components/Workexp.jsx';
 import AnimationTitle from './components/AnimationTitle.jsx';
 import Contact from './components/Contactme.jsx';
 import Education from './components/Education.jsx';
 
-// CHANGE TO Projects (with 's')
+// About Page Components
 import ExpWork from './components/ExpWork';
-import Projects from './components/Projects';  // <-- ADD THE 'S'
+import Projects from './components/Projects';
+
+// Skills Page Components - TechStack replaces Workexp
+import TechStack from './components/TechStack';
 
 function App() {
   return (
@@ -23,21 +25,23 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           
+          {/* About Page Route */}
           <Route path='/about' element={
             <>
               <Abouts /> 
               <ExpWork />
-              <Projects />  {/* <-- CHANGE TO Projects */}
+              <Projects />
               <Education /> 
               <Contact />
             </>
           }></Route>
           
+          {/* Skills Page Route - TechStack replaces Workexp */}
           <Route path='/skills' element={
             <>
               <AnimationTitle /> 
               <Skillz />
-              <Workexp />
+              <TechStack />
             </>
           }></Route>
         </Routes>
