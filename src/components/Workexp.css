@@ -1,23 +1,14 @@
 .experience-container {
   min-height: 100vh;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a0a 100%);
-  padding: 80px 20px;
+  background: transparent; /* Clean black background */
+  padding: 80px 5%;
   position: relative;
   overflow: hidden;
 }
 
+/* Remove grid pattern background */
 .experience-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    repeating-linear-gradient(0deg, rgba(255, 0, 80, 0.03) 0px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(90deg, rgba(255, 0, 80, 0.03) 0px, transparent 2px, transparent 4px);
-  pointer-events: none;
-  opacity: 0.5;
+  display: none;
 }
 
 /* Heading */
@@ -42,7 +33,7 @@
 
 /* Content Container */
 .experience-content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -52,17 +43,17 @@
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 35px;
   width: 100%;
 }
 
-/* Individual Card Styling */
+/* Individual Card Styling - CLEAN VERSION */
 .certification-card {
-  background: rgba(20, 20, 30, 0.6);
-  border: 2px solid rgba(255, 0, 80, 0.3);
-  border-radius: 16px;
+  background: transparent; /* NO grey background */
+  border: 2px solid #ff0050;
+  border-radius: 12px;
   padding: 30px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none; /* Remove blur */
   transition: all 0.3s ease;
   position: relative;
   display: flex;
@@ -72,27 +63,25 @@
 }
 
 .certification-card:hover {
-  border-color: rgba(255, 0, 80, 0.8);
+  background: rgba(40, 40, 45, 0.3); /* Slight background on hover only */
+  border-color: #ff0050;
   transform: translateY(-8px);
-  box-shadow: 0 15px 50px rgba(255, 0, 80, 0.3);
+  box-shadow: 0 15px 50px rgba(255, 0, 80, 0.4);
 }
 
 .certification-card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ff0050, #ff3366, #ff0050);
-  border-radius: 16px 16px 0 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 80, 0.1), transparent);
+  transition: left 0.6s ease;
 }
 
 .certification-card:hover::before {
-  opacity: 1;
-  animation: shimmer 2s ease-in-out infinite;
+  left: 100%;
 }
 
 /* Card Title */
@@ -112,7 +101,7 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 0, 80, 0.2);
+  border-bottom: 1px solid rgba(255, 0, 80, 0.3);
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -124,13 +113,14 @@
 }
 
 .cert-date {
-  background: rgba(255, 0, 80, 0.2);
-  color: #ff0050;
+  background: rgba(255, 0, 80, 0.15);
+  color: #ff3366;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
   font-family: 'Courier New', monospace;
+  border: 1px solid rgba(255, 0, 80, 0.3);
 }
 
 /* Description List */
@@ -144,7 +134,7 @@
 .cert-description li {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 12px;
   padding-left: 20px;
   position: relative;
@@ -192,26 +182,17 @@
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 /* Responsive */
 @media screen and (max-width: 1024px) {
   .certifications-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .experience-container {
-    padding: 60px 15px;
+    padding: 60px 20px;
   }
 
   .certifications-heading {
@@ -219,15 +200,15 @@
     margin-bottom: 40px;
   }
 
-  .experience-card {
+  .certification-card {
     padding: 25px;
   }
 
-  .experience-card h3 {
+  .cert-title {
     font-size: 1.3rem;
   }
 
-  .experience-card li {
+  .cert-description li {
     font-size: 0.9rem;
   }
 }
