@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import {useTypewriter, Cursor} from 'react-simple-typewriter';
+// REMOVE these unused imports:
+// import {useTypewriter, Cursor} from 'react-simple-typewriter';
 import './App.css';
 import Home from './components/pages/Home';
 import Abouts from './components/pages/About.js';
@@ -14,7 +15,7 @@ import Education from './components/Education.jsx';
 import ExpWork from './components/ExpWork';
 import Projects from './components/Projects';
 
-// Skills Page Components - TechStack replaces Workexp
+// Skills Page Components
 import TechStack from './components/TechStack';
 
 function App() {
@@ -25,7 +26,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           
-          {/* About Page Route */}
           <Route path='/about' element={
             <>
               <Abouts /> 
@@ -36,7 +36,6 @@ function App() {
             </>
           }></Route>
           
-          {/* Skills Page Route - TechStack replaces Workexp */}
           <Route path='/skills' element={
             <>
               <AnimationTitle /> 

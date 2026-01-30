@@ -298,7 +298,7 @@ export const EDUCATION = [
 ];
 
 // Export everything as default too for easier imports
-export default {
+const portfolioData = {
   SKILLS,
   CERTIFICATIONS,
   WORK_EXPERIENCE,
@@ -307,3 +307,5 @@ export default {
   PERSONAL_PROJECTS,
   EDUCATION
 };
+
+export default portfolioData;

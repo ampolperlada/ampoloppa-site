@@ -1,5 +1,5 @@
 import React from 'react'
-import pic from '../image/pics.png';
+//import pic from '../image/pics.png';
 import anm from '../image/animes.png';
 import './aboutme.css';
 //import Hds from '../components/scrolldown';
