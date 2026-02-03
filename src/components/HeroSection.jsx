@@ -1,116 +1,67 @@
-import React, { useState } from 'react';
-import '../App.css';
-import { Button } from './Button';
-import './HeroSection.css';
-import fuck from '../video/tanginanyo.mp4';
+import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import './HeroSection.css';
 
-function HeroSection() {
-  const [textti] = useTypewriter({
-    words: ['Junior Developer', 'Full-Stack Developer', 'React Enthusiast', 'Problem Solver'],
-    loop: {},
-    typeSpeed: 120,
-    deleteSpeed: 80,
+const HeroSection = () => {
+  const [text] = useTypewriter({
+    words: ['Full-Stack Developer', 'React Enthusiast', 'Problem Solver'],
+    loop: 0,
+    typeSpeed: 70,
+    deleteSpeed: 50,
+    delaySpeed: 2000,
   });
 
-  const [isCopied, setIsCopied] = useState(false);
-
-  const handleCopy = () => {
-    const phoneNumber = "09605044538";
-    navigator.clipboard.writeText(phoneNumber)
-      .then(() => {
-        setIsCopied(true);
-        setTimeout(() => setIsCopied(false), 2000);
-      })
-      .catch((err) => {
-        console.error("Failed to copy text: ", err);
-      });
-  };
-
-  // Scroll to projects section
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className='hero-container'>
-      <video src={fuck} autoPlay loop muted />
-      
-      {/* Added greeting */}
-      <p className='hero-greeting'>こんにちは (Hello!) </p>
-      
-      {/* Main title - FIXED "Ampol" */}
-      <h1 className='hero-name'>
-        Christian <span className='name-highlight'>Paul</span> Perlada
-      </h1>
-      
-      {/* Dynamic typing title */}
-      <h2 className='iba-nato'>
-        <span className='title-prefix'>I'm a </span>
-        <span className='title-dynamic'>
-          {textti}
-        </span>
-        <span style={{ color: 'red' }}>
-          <Cursor cursorStyle='<' />
-        </span>
-      </h2>
+    <section className="hero-section">
+      {/* Darker Overlay for Better Text Readability */}
+      <div className="hero-overlay"></div>
 
-      {/* Added tagline */}
-      <p className='hero-tagline'>
-        Building <span className='highlight'>enterprise applications</span> and{' '}
-        <span className='highlight'>internal systems</span> with modern web technologies
-      </p>
+      {/* Content - SIMPLIFIED */}
+      <div className="hero-content">
+        <h1 className="hero-name">
+          Christian <span className="hero-highlight">Paul</span> Perlada
+        </h1>
 
-      {/* Stats section */}
-      <div className='hero-stats'>
-        <div className='stat-item'>
-          <span className='stat-number'>5+</span>
-          <span className='stat-label'>Production Systems</span>
+        <div className="hero-typing">
+          <span className="typing-text">I'm a {text}</span>
+          <Cursor cursorStyle="|" />
         </div>
-        <div className='stat-item'>
-          <span className='stat-number'>100+</span>
-          <span className='stat-label'>Users Served</span>
+
+        {/* Stats - BOTTOM ONLY */}
+        <div className="hero-stats">
+          <div className="hero-stat">
+            <span className="stat-number">5+</span>
+            <span className="stat-label">PRODUCTION SYSTEMS</span>
+          </div>
+          <div className="hero-stat">
+            <span className="stat-number">100+</span>
+            <span className="stat-label">USERS SERVED</span>
+          </div>
+          <div className="hero-stat">
+            <span className="stat-number">6</span>
+            <span className="stat-label">MONTHS EXPERIENCE</span>
+          </div>
         </div>
-        <div className='stat-item'>
-          <span className='stat-number'>6</span>
-          <span className='stat-label'>Months Experience</span>
+
+        {/* Buttons */}
+        <div className="hero-buttons">
+          <a href="#contact" className="hero-btn hero-btn-primary">Call Me</a>
+          <a href="#projects" className="hero-btn hero-btn-secondary">View Projects</a>
         </div>
-      </div>
 
-      <div className='hero-btns'>
-        <Button
-          className={`btns ${isCopied ? 'copied' : ''}`}
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          onClick={handleCopy}
-        >
-          {isCopied ? ' Copied!' : ' Call Me'}
-        </Button>
-
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={scrollToProjects}
-        >
-          View Projects <i className='far fa-play-circle' />
-        </Button>
-      </div>
-
-      {/* Tech stack badges */}
-      <div className='hero-tech-stack'>
-        <span className='tech-label'>Tech Stack:</span>
-        <div className='tech-badges'>
-          {['React', 'Next.js', 'Node.js', 'PostgreSQL'].map((tech, idx) => (
-            <span key={idx} className='tech-badge'>{tech}</span>
-          ))}
+        {/* Tech Stack - Bottom */}
+        <div className="hero-tech-stack">
+          <span className="tech-label">TECH STACK:</span>
+          <div className="tech-badges">
+            <span className="tech-badge">React</span>
+            <span className="tech-badge">Next.js</span>
+            <span className="tech-badge">Node.js</span>
+            <span className="tech-badge">PostgreSQL</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default HeroSection;
