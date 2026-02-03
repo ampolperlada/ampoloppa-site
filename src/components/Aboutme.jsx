@@ -3,7 +3,7 @@ import anm from '../image/animes.png';
 import './aboutme.css';
 
 const Aboutme = () => {
-  // Real stats - no fake numbers
+  // Real stats
   const realStats = [
     { number: "5+", label: "Production Systems" },
     { number: "100+", label: "Users Served" },
@@ -12,49 +12,65 @@ const Aboutme = () => {
   ];
 
   return (
-    <section className="about container" id="about">
-      <div className="intro">
-        {/* Anime Image */}
-        <img src={anm} alt="Christian Paul Perlada" className="about_img" />
+    <section className="about-section-new" id="about">
+      <div className="about-container-new">
         
-        {/* Name */}
-        <h1 className="about__name">
-          Christi<span className='chris'>an</span> <span className='chris'>Paul</span> Perlada
-        </h1>
-        
-        {/* Title */}
-        <span className="about__education">Junior Software Engineer</span>
-        
-        {/* Bio */}
-        <p className="about__bio">
-          Passionate about building full-stack systems that solve real business problems. 
-          Experienced in React, Next.js, Node.js, and PostgreSQL with a proven track record 
-          of delivering production systems serving 100+ users.
-        </p>
-
-        {/* Real Stats Grid */}
-        <div className="about__stats-grid">
-          {realStats.map((stat, index) => (
-            <div key={index} className="stat-box">
-              <h3 className="stat-number">{stat.number}</h3>
-              <span className="stat-label">{stat.label}</span>
-            </div>
-          ))}
+        {/* Left Side - Image */}
+        <div className="about-left">
+          <div className="profile-image-wrapper">
+            <div className="image-frame"></div>
+            <img src={anm} alt="Christian Paul Perlada" className="profile-image" />
+            <div className="image-glow-effect"></div>
+          </div>
         </div>
 
-        {/* Buttons */}
-        <div className="about__buttons">
-          <a href="#contact" className="button-86">Hire Me</a>
-          <a 
-            href="/Resume_Christian_.pdf" 
-            className="button-download" 
-            download 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Download CV
-          </a>
+        {/* Right Side - Content */}
+        <div className="about-right">
+          <h1 className="about-name-new">
+            Christian <span className='highlight-red'>Paul</span> Perlada
+          </h1>
+          
+          <span className="about-title-new">Junior Software Engineer</span>
+          
+          <p className="about-bio-new">
+            Passionate about building full-stack systems that solve real business problems. 
+            Experienced in React, Next.js, Node.js, and PostgreSQL with a proven track record 
+            of delivering production systems serving 100+ users.
+          </p>
+
+          {/* Stats Grid */}
+          <div className="stats-grid-new">
+            {realStats.map((stat, index) => (
+              <div key={index} className="stat-item-new">
+                <h3 className="stat-num">{stat.number}</h3>
+                <span className="stat-text">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Only Download CV Button - Centered */}
+          <div className="button-wrapper-new">
+            <a 
+              href="/Resume_Christian_.pdf" 
+              className="download-cv-btn-new" 
+              download 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span className="btn-icon">📥</span>
+              Download CV
+            </a>
+          </div>
         </div>
+
+      </div>
+
+      {/* Decorative Background Elements */}
+      <div className="bg-decoration">
+        <div className="deco-circle deco-1"></div>
+        <div className="deco-circle deco-2"></div>
+        <div className="deco-line deco-line-1"></div>
+        <div className="deco-line deco-line-2"></div>
       </div>
     </section>
   );
