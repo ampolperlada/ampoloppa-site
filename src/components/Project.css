@@ -1,12 +1,11 @@
-/* Projects Wrapper - NO GREY BACKGROUND */
+/* Projects Wrapper */
 .projects-wrapper {
-  background: transparent;
+  background: #242424;
   width: 100%;
 }
 
 /* Projects Section */
 .projects-section {
-  background: transparent; /* Clean, no container */
   padding: 80px 5% 60px;
   position: relative;
   width: 100%;
@@ -30,6 +29,149 @@
   color: #ff0050;
 }
 
+/* FEATURED PROJECT SHOWCASE - Pixel Forge */
+.featured-project-showcase {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  background: rgba(40, 40, 45, 0.5);
+  border: 2px solid #ff3366;
+  border-radius: 15px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-project-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 51, 102, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.featured-project-showcase:hover::before {
+  left: 100%;
+}
+
+.featured-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.featured-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff3366;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.featured-year {
+  font-size: 1.1rem;
+  color: #ff3366;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: rgba(255, 51, 102, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  display: inline-block;
+  width: fit-content;
+}
+
+.featured-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin: 0;
+}
+
+.featured-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.view-live-btn {
+  background: linear-gradient(135deg, #ff3366, #cc0050);
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 5px 20px rgba(255, 51, 102, 0.3);
+}
+
+.view-live-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 51, 102, 0.5);
+}
+
+.featured-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-preview-wrapper {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/10;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #ff3366;
+  box-shadow: 0 10px 40px rgba(255, 51, 102, 0.3);
+  position: relative;
+}
+
+.project-preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-preview-wrapper:hover .project-preview-image {
+  transform: scale(1.05);
+}
+
+.project-preview-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 40, 45, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+}
+
+.placeholder-text {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 600;
+}
+
 /* Projects Grid */
 .projects-grid {
   max-width: 1200px;
@@ -41,7 +183,7 @@
 
 /* Project Card */
 .project-card-item {
-  background: transparent; /* No background, just border */
+  background: transparent;
   border: 2px solid #ff0050;
   border-radius: 12px;
   padding: 30px;
@@ -55,7 +197,6 @@
   border-color: #ff3366;
 }
 
-/* Shine effect on hover */
 .project-card-item::before {
   content: '';
   position: absolute;
@@ -72,7 +213,7 @@
 }
 
 .project-card-item:hover {
-  background: rgba(40, 40, 45, 0.3); /* Slight background on hover */
+  background: rgba(40, 40, 45, 0.3);
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
 }
@@ -179,6 +320,15 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .featured-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .featured-right {
+    order: -1;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -199,6 +349,15 @@
     margin-bottom: 40px;
   }
 
+  .featured-project-showcase {
+    padding: 35px 25px;
+    margin-bottom: 50px;
+  }
+
+  .featured-title {
+    font-size: 2rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -216,6 +375,14 @@
 @media (max-width: 480px) {
   .projects-heading {
     font-size: 1.8rem;
+  }
+
+  .featured-project-showcase {
+    padding: 25px 20px;
+  }
+
+  .featured-title {
+    font-size: 1.6rem;
   }
 
   .project-card-item {
