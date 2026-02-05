@@ -48,14 +48,12 @@ const Aboutme = () => {
             ))}
           </div>
 
-          {/* Only Download CV Button - Centered */}
+          {/* Download CV Button - FIXED */}
           <div className="button-wrapper-new">
             <a 
-              href="/Resume(Christian).pdf" 
+              href="/Resume_Christian.pdf" 
               className="download-cv-btn-new" 
-              download 
-              target="_blank" 
-              rel="noopener noreferrer"
+              download="Christian_Perlada_Resume.pdf"
             >
               <span className="btn-icon">📥</span>
               Download CV
