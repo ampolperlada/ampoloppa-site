@@ -1,7 +1,7 @@
-/* Work Experience Section */
+/* Work Experience Section - CLEAN BLACK BACKGROUND */
 .work-experience-section {
-  background: #242424;
-  padding: 80px 0 60px;
+  background: transparent; /* No grey container */
+  padding: 80px 5% 60px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -21,24 +21,20 @@
   color: #ff0050;
 }
 
-/* Experience Container - FULL WIDTH */
+/* Experience Container */
 .experience-container {
-  max-width: 100%;
-  padding: 0 5%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* Experience Card - EDGE TO EDGE DESIGN */
+/* Experience Card */
 .exp-card {
-  background: rgba(40, 40, 45, 0.8);
-  border-left: 4px solid #ff0050;
-  border-right: 4px solid #ff0050;
-  border-top: 2px solid #ff0050;
-  border-bottom: 2px solid #ff0050;
-  border-radius: 0;
+  background: transparent; /* No background, just border */
+  border: 2px solid #ff0050;
+  border-radius: 15px;
   padding: 35px 40px;
   position: relative;
   transition: all 0.4s ease;
@@ -58,9 +54,9 @@
 }
 
 .exp-card:hover {
+  background: rgba(40, 40, 45, 0.3); /* Slight background on hover */
   transform: translateX(10px);
   box-shadow: -8px 8px 30px rgba(255, 0, 80, 0.4);
-  border-left-width: 6px;
 }
 
 .exp-card:hover::before {
@@ -172,56 +168,114 @@
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - FULLY MOBILE */
 @media (max-width: 768px) {
   .work-experience-section {
-    padding: 60px 0 40px;
+    padding: 60px 4% 40px;
   }
 
   .section-heading-exp {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     margin-bottom: 40px;
   }
 
   .experience-container {
-    padding: 0 20px;
+    gap: 25px;
   }
 
   .exp-card {
     padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .exp-card:hover {
+    transform: translateX(0);
+    transform: translateY(-5px);
   }
 
   .exp-header {
     flex-direction: column;
+    gap: 15px;
   }
 
   .exp-right {
     align-items: flex-start;
+    width: 100%;
   }
 
   .exp-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
   }
 
   .exp-company {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
   }
 
-  .experience-container {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-heading-exp {
-    font-size: 1.8rem;
-  }
-
-  .exp-title {
-    font-size: 1.3rem;
+  .exp-period,
+  .exp-location {
+    font-size: 0.95rem;
   }
 
   .exp-achievement-item {
     font-size: 0.95rem;
+    gap: 12px;
+  }
+
+  .exp-bullet {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-experience-section {
+    padding: 50px 15px 30px;
+  }
+
+  .section-heading-exp {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .experience-container {
+    gap: 20px;
+  }
+
+  .exp-card {
+    padding: 20px 15px;
+  }
+
+  .exp-title {
+    font-size: 1.2rem;
+  }
+
+  .exp-company {
+    font-size: 1rem;
+  }
+
+  .exp-period,
+  .exp-location {
+    font-size: 0.85rem;
+  }
+
+  .exp-achievement-item {
+    font-size: 0.9rem;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-heading-exp {
+    font-size: 1.4rem;
+  }
+
+  .exp-title {
+    font-size: 1.1rem;
+  }
+
+  .exp-achievement-item {
+    font-size: 0.85rem;
   }
 }
