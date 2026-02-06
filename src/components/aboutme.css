@@ -321,28 +321,32 @@
   50% { transform: translateX(-100%); }
 }
 
-/* Responsive Design */
+/* Responsive Design - FULLY MOBILE */
 @media (max-width: 1200px) {
   .about-container-new {
-    grid-template-columns: 400px 1fr;
-    gap: 60px;
+    grid-template-columns: 380px 1fr;
+    gap: 50px;
   }
 
   .profile-image-wrapper {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
   }
 
   .profile-image {
-    width: 290px;
-    height: 290px;
+    width: 270px;
+    height: 270px;
   }
 }
 
 @media (max-width: 968px) {
+  .about-section-new {
+    padding: 60px 4% 40px;
+  }
+
   .about-container-new {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     text-align: center;
   }
 
@@ -350,44 +354,101 @@
     justify-content: center;
   }
 
+  .about-name-new {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .about-title-new {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .about-bio-new {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin: 0 auto 30px;
+  }
+
   .stats-grid-new {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 500px;
-    margin: 0 auto 40px;
+    max-width: 450px;
+    margin: 0 auto 30px;
+    gap: 20px;
   }
 
   .button-wrapper-new {
     justify-content: center;
   }
-
-  .about-bio-new {
-    margin: 0 auto 40px;
-  }
 }
 
 @media (max-width: 640px) {
   .about-section-new {
-    padding: 80px 20px 40px;
+    padding: 60px 15px 40px;
   }
 
   .profile-image-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
   }
 
   .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 210px;
+    height: 210px;
   }
 
   .stats-grid-new {
     grid-template-columns: 1fr;
-    max-width: 300px;
+    max-width: 280px;
+    gap: 15px;
+  }
+
+  .stat-item-new {
+    padding: 18px 15px;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  .stat-text {
+    font-size: 0.8rem;
   }
 
   .download-cv-btn-new {
     width: 100%;
-    max-width: 320px;
-    justify-content: center;
+    max-width: 300px;
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-name-new {
+    font-size: 1.8rem;
+  }
+
+  .about-title-new {
+    font-size: 1.1rem;
+  }
+
+  .profile-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .stats-grid-new {
+    max-width: 240px;
+  }
+
+  .download-cv-btn-new {
+    max-width: 260px;
+    padding: 12px 30px;
   }
 }
