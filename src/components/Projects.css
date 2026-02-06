@@ -17,7 +17,7 @@
 
 /* Section Heading */
 .projects-heading {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 800;
   text-align: center;
   color: #fff;
@@ -36,7 +36,7 @@
   background: rgba(40, 40, 45, 0.5);
   border: 2px solid #ff3366;
   border-radius: 15px;
-  padding: 50px;
+  padding: clamp(25px, 5vw, 50px);
   position: relative;
   overflow: hidden;
 }
@@ -59,18 +59,18 @@
 .featured-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: clamp(30px, 5vw, 50px);
   align-items: center;
 }
 
 .featured-left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(15px, 3vw, 20px);
 }
 
 .featured-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   color: #ff3366;
   margin: 0;
@@ -78,7 +78,7 @@
 }
 
 .featured-year {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: #ff3366;
   font-weight: 600;
   padding: 6px 14px;
@@ -90,7 +90,7 @@
 }
 
 .featured-description {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.8;
   color: #ddd;
   margin: 0;
@@ -105,9 +105,9 @@
 .view-live-btn {
   background: linear-gradient(135deg, #ff3366, #cc0050);
   color: #fff;
-  padding: 14px 35px;
+  padding: clamp(12px, 2vw, 14px) clamp(25px, 4vw, 35px);
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
@@ -163,11 +163,11 @@
 }
 
 .placeholder-icon {
-  font-size: 4rem;
+  font-size: clamp(3rem, 6vw, 4rem);
 }
 
 .placeholder-text {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #999;
   font-weight: 600;
 }
@@ -177,8 +177,8 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(25px, 4vw, 35px);
 }
 
 /* Project Card */
@@ -186,11 +186,13 @@
   background: transparent;
   border: 2px solid #ff0050;
   border-radius: 12px;
-  padding: 30px;
+  padding: clamp(20px, 4vw, 30px);
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card-item.personal-card {
@@ -218,17 +220,38 @@
   box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
 }
 
+/* Project Card Image */
+.project-card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card-item:hover .project-card-image {
+  transform: scale(1.05);
+}
+
 /* Card Header */
 .project-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 18px;
+  margin-bottom: clamp(12px, 2vw, 18px);
   gap: 15px;
 }
 
 .project-card-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 700;
   color: #fff;
   margin: 0;
@@ -237,7 +260,7 @@
 }
 
 .project-year {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
   color: #ff3366;
   font-weight: 600;
   white-space: nowrap;
@@ -249,25 +272,27 @@
 
 /* Card Description */
 .project-card-desc {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
   line-height: 1.7;
   color: #ccc;
-  margin: 0 0 22px;
+  margin: 0 0 clamp(15px, 3vw, 22px);
+  flex: 1;
 }
 
 /* Tech Tags */
 .project-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: clamp(8px, 1.5vw, 10px);
+  margin-top: auto;
 }
 
 .tech-badge {
   background: rgba(255, 0, 80, 0.12);
   color: #ff3366;
-  padding: 7px 16px;
+  padding: clamp(6px, 1vw, 7px) clamp(12px, 2vw, 16px);
   border-radius: 20px;
-  font-size: 0.88rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.88rem);
   font-weight: 600;
   border: 1px solid rgba(255, 0, 80, 0.3);
   transition: all 0.3s ease;
@@ -283,8 +308,8 @@
 .project-corner-tl,
 .project-corner-br {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: clamp(20px, 4vw, 25px);
+  height: clamp(20px, 4vw, 25px);
   border: 2px solid #ff0050;
   transition: all 0.3s ease;
 }
@@ -318,11 +343,11 @@
   right: 8px;
 }
 
-/* Responsive Design */
+/* Responsive Design - MOBILE FIRST */
 @media (max-width: 1024px) {
   .featured-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .featured-right {
@@ -330,14 +355,13 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 60px 20px 40px;
+    padding: 60px 4% 40px;
   }
 
   .personal-section {
@@ -345,56 +369,47 @@
   }
 
   .projects-heading {
-    font-size: 2.2rem;
     margin-bottom: 40px;
   }
 
   .featured-project-showcase {
-    padding: 35px 25px;
     margin-bottom: 50px;
-  }
-
-  .featured-title {
-    font-size: 2rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
   }
 
-  .project-card-title {
-    font-size: 1.3rem;
-  }
-
-  .project-card-desc {
-    font-size: 0.98rem;
+  .project-card-image-wrapper {
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-heading {
-    font-size: 1.8rem;
+  .projects-section {
+    padding: 40px 15px 30px;
   }
 
   .featured-project-showcase {
-    padding: 25px 20px;
-  }
-
-  .featured-title {
-    font-size: 1.6rem;
+    border-radius: 10px;
   }
 
   .project-card-item {
-    padding: 25px;
+    border-radius: 10px;
   }
 
-  .project-card-title {
-    font-size: 1.2rem;
+  .project-card-image-wrapper {
+    height: 160px;
+    margin-bottom: 15px;
+  }
+
+  .view-live-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .tech-badge {
-    font-size: 0.82rem;
-    padding: 6px 13px;
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 }

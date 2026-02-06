@@ -58,12 +58,23 @@ const Projects = () => {
           </div>
         ))}
 
-        {/* Regular Personal Projects Grid */}
+        {/* Regular Personal Projects Grid - WITH IMAGES */}
         <div className="projects-grid">
           {PERSONAL_PROJECTS.filter(project => !project.isFeatured).map((project, index) => (
             <div key={index} className="project-card-item personal-card">
               <div className="project-corner-tl"></div>
               <div className="project-corner-br"></div>
+
+              {/* Project Image if available */}
+              {project.image && (
+                <div className="project-card-image-wrapper">
+                  <img 
+                    src={project.image} 
+                    alt={`${project.title} preview`} 
+                    className="project-card-image"
+                  />
+                </div>
+              )}
 
               <div className="project-card-header">
                 <h3 className="project-card-title">{project.title}</h3>
