@@ -230,8 +230,8 @@ export const PERSONAL_PROJECTS = [
     description: "Interactive 3D motorcycle color customization app using Three.js. Users can rotate NMAX model 360° and customize body, wheels, seat, mirrors, and frame colors in real-time",
     tech: ["Next.js", "Three.js", "TypeScript", "Tailwind"],
     isFeatured: true,
-    // liveUrl: "https://your-motoph-url.com",      // add when deployed
-    // image: "/projects/motoph-preview.png",       // add when ready
+    liveUrl: "https://your-motoph-url.com",      // add when deployed
+    image: "/projects/motoph-preview.png",       // add when ready
   },
   {
     title: "Music API",
