@@ -4,7 +4,7 @@ import backendIcon from '../image/Skillimage.png';
 import toolsIcon from '../image/Skillimage.png';
 import softSkillsIcon from '../image/Skillimage.png';
 
-// SKILLS DATA (unchanged)
+// SKILLS DATA
 export const SKILLS = [
   {
     title: "Frontend",
@@ -56,7 +56,7 @@ export const SKILLS = [
   },
 ];
 
-// CERTIFICATIONS (unchanged)
+// CERTIFICATIONS
 export const CERTIFICATIONS = [
   {
     title: "React Native Fundamentals",
@@ -80,7 +80,7 @@ export const CERTIFICATIONS = [
   },
 ];
 
-// WORK EXPERIENCE - Updated structure
+// WORK EXPERIENCE
 export const WORK_EXPERIENCE = [
   {
     role: "Junior Software Engineer",
@@ -108,78 +108,7 @@ export const WORK_EXPERIENCE = [
   },
 ];
 
-// PROJECTS - Main showcase list (kept similar structure but cleaned)
-export const PROJECTS = [
-  {
-    id: 1,
-    title: "AI-Enhanced Project Management System",
-    category: "professional",
-    description: "Internal project management system with AI-powered risk analysis using Claude MCP",
-    tech: ["Next.js", "React", "Node.js", "Claude MCP", "PostgreSQL"],
-    status: "Production",
-    company: "New Barbizon Fashion Inc",
-    period: "2025",
-  },
-  {
-    id: 2,
-    title: "Cash Disbursement Module",
-    category: "professional",
-    description: "Enterprise financial system for liquidation and reimbursements with multi-level approvals",
-    tech: ["Next.js", "PostgreSQL", "REST API", "Supabase"],
-    status: "Production",
-    company: "New Barbizon Fashion Inc",
-    period: "2025",
-  },
-  {
-    id: 3,
-    title: "MotoPH - 3D Motorcycle Customizer",
-    category: "personal",
-    description: "Interactive 3D motorcycle color customizer using Three.js with real-time 360° rotation",
-    tech: ["Next.js", "Three.js", "TypeScript", "Tailwind"],
-    status: "In Progress",
-    period: "2025",
-  },
-  {
-    id: 4,
-    title: "Pixel Forge - NFT Marketplace",
-    category: "personal",
-    description: "Web3 platform for minting and trading AI-generated pixel art NFTs",
-    tech: ["React", "Web3.js", "Ethereum", "Polygon"],
-    status: "In Progress",
-    period: "Feb 2025 - Present",
-  },
-  {
-    id: 5,
-    title: "Employee Exit Clearance System",
-    category: "professional",
-    description: "Paperless offboarding system with multi-department clearance tracking",
-    tech: ["Next.js", "Node.js", "Google OAuth", "PostgreSQL"],
-    status: "Production",
-    company: "New Barbizon Fashion Inc",
-    period: "2025",
-  },
-  {
-    id: 6,
-    title: "RDS SKU Request System",
-    category: "professional",
-    description: "Automated 16-digit SKU code generator for merchandising team",
-    tech: ["Next.js", "PostgreSQL", "REST API"],
-    status: "Production",
-    company: "New Barbizon Fashion Inc",
-    period: "2025",
-  },
-  {
-    id: 7,
-    title: "Music API",
-    category: "academic",
-    description: "Full REST API for music catalog management with CRUD operations",
-    tech: ["Express.js", "PostgreSQL", "REST API", "Postman"],
-    status: "Completed",
-    period: "2024",
-  },
-];
-
-// PROFESSIONAL PROJECTS - Cleaned & concise
+// PROFESSIONAL PROJECTS
 export const PROFESSIONAL_PROJECTS = [
   {
     title: "AI-Enhanced Project Management",
@@ -213,7 +142,7 @@ export const PROFESSIONAL_PROJECTS = [
   },
 ];
 
-// PERSONAL PROJECTS - Updated (removed Auth System, added MotoPH)
+// PERSONAL PROJECTS - Only Pixel Forge + MotoPH
 export const PERSONAL_PROJECTS = [
   {
     title: "Pixel Forge - NFT Marketplace",
@@ -221,27 +150,20 @@ export const PERSONAL_PROJECTS = [
     description: "Full-stack Web3 platform for creating, minting, and trading pixel art NFTs with AI-generated customization and game integration API",
     tech: ["React", "Web3", "Ethereum", "Polygon", "AI"],
     isFeatured: true,
-    liveUrl: "https://pixel-forge.vercel.app", // update if different
-    image: "/projects/pixel-forge-preview.png", // add this image to your public folder
+    liveUrl: "https://pixelforge-nft.vercel.app",
+    image: "/projects/pixel-forge-preview.png",
   },
   {
     title: "MotoPH - 3D Motorcycle Customizer",
     year: "2025",
     description: "Interactive 3D motorcycle color customization app using Three.js. Users can rotate NMAX model 360° and customize body, wheels, seat, mirrors, and frame colors in real-time",
     tech: ["Next.js", "Three.js", "TypeScript", "Tailwind"],
-    isFeatured: true,
-    liveUrl: "https://your-motoph-url.com",      // add when deployed
-    image: "/projects/motoph-preview.png",       // add when ready
-  },
-  {
-    title: "Music API",
-    year: "2024",
-    description: "Full REST API for music catalog management built with Express.js and PostgreSQL",
-    tech: ["Express.js", "PostgreSQL", "REST API", "Postman"],
+    isFeatured: false,
+    image: "/projects/motoph-preview.png",
   },
 ];
 
-// EDUCATION DATA (unchanged)
+// EDUCATION DATA
 export const EDUCATION = [
   {
     year: "2024",
@@ -281,7 +203,6 @@ const portfolioData = {
   SKILLS,
   CERTIFICATIONS,
   WORK_EXPERIENCE,
-  PROJECTS,
   PROFESSIONAL_PROJECTS,
   PERSONAL_PROJECTS,
   EDUCATION,
