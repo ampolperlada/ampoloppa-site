@@ -27,35 +27,22 @@ function HeroSection() {
       });
   };
 
-  // Scroll to projects section
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className='hero-container'>
-      <video src={fuck} autoPlay loop muted />
-      
-      {/* Main title */}
+      <video src={fuck} autoPlay loop muted playsInline />
+
       <h1 className='hero-name'>
         Christian <span className='name-highlight'>Paul</span> Perlada
       </h1>
-      
-      {/* Dynamic typing title */}
+
       <h2 className='iba-nato'>
         <span className='title-prefix'>I'm a </span>
-        <span className='title-dynamic'>
-          {textti}
-        </span>
+        <span className='title-dynamic'>{textti}</span>
         <span style={{ color: 'red' }}>
           <Cursor cursorStyle='<' />
         </span>
       </h2>
 
-      {/* Stats section */}
       <div className='hero-stats'>
         <div className='stat-item'>
           <span className='stat-number'>5+</span>
@@ -74,24 +61,14 @@ function HeroSection() {
       <div className='hero-btns'>
         <Button
           className={`btns ${isCopied ? 'copied' : ''}`}
-          buttonStyle='btn--outline'
+          buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={handleCopy}
         >
-          {isCopied ? '📋 Copied!' : '📞 Call Me'}
-        </Button>
-
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={scrollToProjects}
-        >
-          View Projects <i className='far fa-play-circle' />
+          {isCopied ? 'Copied!' : 'Call Me'}
         </Button>
       </div>
 
-      {/* Tech stack badges */}
       <div className='hero-tech-stack'>
         <span className='tech-label'>TECH STACK:</span>
         <div className='tech-badges'>
