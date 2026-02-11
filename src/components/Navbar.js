@@ -1,70 +1,74 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
 
-
-//import Navbar from './components/Navbar';
-
-
-
-
-
 function Navbar() {
-  const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-  
+  const location = useLocation();
+
   const showButton = () => {
-    if(window.innerWidth <= 960 ) {
-      setButton(false)
-    } else{
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
       setButton(true);
     }
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     showButton();
-  },[]);
+    window.addEventListener('resize', showButton);
+    return () => window.removeEventListener('resize', showButton);
+  }, []);
 
-  window.addEventListener('resize', showButton);
+  const navItems = [
+    { path: '/', label: '.me()', icon: '⌂' },
+    { path: '/skills', label: '.skills()', icon: '⚡' },
+    { path: '/about', label: '.about()', icon: '◈' },
+  ];
 
   return (
-     <>
-     <nav className='navbar'>
-      <div className='navbar-container'>
-        <Link to = "/" className="navbar-logo" onClick={closeMobileMenu}>
-          X <i className='fab fa-typo3' / >
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'xicon.png' : 'burger-bar.png'} />
+    <>
+      {/* TOP NAVBAR - Desktop */}
+      <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to="/" className="navbar-logo">
+            X
+          </Link>
+
+          {/* Desktop Nav Links */}
+          <ul className='nav-menu'>
+            {navItems.map((item) => (
+              <li key={item.path} className='nav-item'>
+                <Link
+                  to={item.path}
+                  className={`nav-links ${location.pathname === item.path ? 'active-link' : ''}`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {button && <Button buttonStyle='btn--outline'>X</Button>}
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-            .me()
-              </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/skills' className='nav-links' onClick={closeMobileMenu}>
-            .skills()
-              </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-            .about()
-              </Link>
-          </li>
-         
-        </ul>
-        {button && <Button buttonStyle='btn--outline'>X</Button>}
-      </div>
-     </nav>
-     </>
- 
-  )
+      </nav>
+
+      {/* BOTTOM TAB BAR - Mobile Only */}
+      <nav className='bottom-tab-bar'>
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`tab-item ${location.pathname === item.path ? 'tab-active' : ''}`}
+          >
+            <span className='tab-icon'>{item.icon}</span>
+            <span className='tab-label'>{item.label}</span>
+          </Link>
+        ))}
+      </nav>
+    </>
+  );
 }
 
 export default Navbar;
